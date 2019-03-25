@@ -6,8 +6,7 @@
   "scripts": {
     "doc": "gulp typedoc",
     "start:pro": "yarn webpack --config=webpack.config.ts --mode=production && yarn gulp init-file",
-    "start:dev": "yarn webpack --config=webpack.config.ts --mode=development --watch",
-    "start:ser": "yarn gulp init-file && yarn http-server dist -c-0 -o -p 8080 -s"
+    "start:dev": "yarn gulp init-file && yarn webpack-dev-server --open --hot --inline && yarn webpack --config=webpack.config.ts --mode=development --watch"
   },
   "repository": {
     "type": "git",
@@ -45,7 +44,8 @@
     "typedoc": "^0.11.1",
     "typescript": "^2.9.2",
     "webpack": "^4.16.5",
-    "webpack-cli": "^3.0.8"
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.2.1"
   },
   "dependencies": {}
 }
